@@ -1,0 +1,36 @@
+API SECURITY RISK ANALYSIS: SCOPE & RULES OF ENGAGEMENT
+
+Targets:       https://jsonplaceholder.typicode.com  (tested 18 November 2026)
+               https://restful-booker.herokuapp.com  (tested 19 November 2026)
+Reason:        Public demo APIs built for testing and learning
+Report date:   21 November 2026
+Assessor:      Sukh Ram Godara
+Program:       Future Interns, Cyber Security Internship, Task 3
+
+IN SCOPE
+- Read-only GET requests
+- One safe POST with an empty body on JSONPlaceholder (the API only simulates creating data)
+- Header, response and error inspection
+- One request with a foreign Origin header to check CORS behaviour
+- Documentation-based review of Restful-Booker authentication
+- A very small number of requests per endpoint
+
+OUT OF SCOPE / NOT PERFORMED
+- Exploitation or bypass attempts
+- Brute force, flooding or denial of service
+- Login or token requests (POST /auth)
+- PUT, PATCH or DELETE requests (these would change data)
+- Injection or attack payloads
+- Testing any private or production API
+
+TOOLS USED
+- Postman
+- curl (on Kali Linux)
+- Restful-Booker API documentation
+- OWASP API Security Top 10 (2023) as reference
+- Canva (report design)
+
+METHOD
+Read-only. No credentials were used. No data was modified.
+Risk ratings assume the APIs held real customer data, because both are demos with fake data.
+Guest names in screenshots were hidden.
